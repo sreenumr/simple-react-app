@@ -1,0 +1,6 @@
+.Form{
+    background:turquoise;
+    border-radius: 3px;
+    border:2px solid blue;
+    display: inline-block;
+}

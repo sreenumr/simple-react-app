@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import ReactDOM from 'react-dom';
 
 class Register extends Component{
 
@@ -7,8 +6,8 @@ class Register extends Component{
         return(
             <div>
                 <form>
-                    <input type="text" placeholder="name"></input>
-                    <input type="text" placeholder="hobby"></input>
+                    <input type="text" placeholder="name" ></input>
+                    <input type="text" placeholder="place"></input>
                 </form>
             </div>
         )
