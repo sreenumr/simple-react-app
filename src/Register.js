@@ -2,14 +2,19 @@ import React, { Component } from 'react';
 
 class Register extends Component{
 
+
+    state = {
+        on:true,
+    };
+
     render(){
         return(
-            <div>
+         
                 <form>
-                    <input type="text" placeholder="name" ></input>
-                    <input type="text" placeholder="place"></input>
+                    <input type="text"></input>
+                    <input type="text"></input>
                 </form>
-            </div>
+         
         )
     }
 }
