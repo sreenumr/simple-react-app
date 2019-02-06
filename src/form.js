@@ -36,8 +36,8 @@ class Form extends Component{
         return(
             <div className="Form">
                 <Button onClick={this.change}>{this.state.text}</Button>
-                <Register></Register>
-                <Login></Login>
+                {this.state.reg ?<Register></Register>:null}
+                {this.state.login?<Login></Login>:null}
             </div>
         )
     }
