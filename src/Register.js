@@ -11,8 +11,8 @@ class Register extends Component{
         return(
          
                 <form>
-                    <input type="text"></input>
-                    <input type="text"></input>
+                    <input type="text" placeholder="reg"></input>
+                    <input type="text" placeholder="reg"></input>
                 </form>
          
         )

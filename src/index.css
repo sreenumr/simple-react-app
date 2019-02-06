@@ -1,4 +1,10 @@
 .Form{
+    
+    position: absolute;
+    top: 50%;
+    left: 40%;
+    margin-top: -50px;
+    margin-left: -50px;
     background:turquoise;
     border-radius: 3px;
     border:2px solid blue;

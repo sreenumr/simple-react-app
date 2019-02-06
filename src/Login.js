@@ -8,8 +8,8 @@ class Login extends Component {
             <div>
                
                 <form>
-                    <input type="text"></input>
-                    <input type="password"></input>
+                    <input type="text" placeholder="log"></input>
+                    <input type="text" placeholder="log"></input>
                 </form>
             </div>
         );
