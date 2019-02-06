@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Register from './Register'
 import Login from './Login'
+import './index.css'
 import {Button} from 'react-bootstrap'
 
 class Form extends Component{
@@ -33,8 +34,7 @@ class Form extends Component{
 
     render(){
         return(
-            <div>
-                
+            <div className="Form">
                 <Button onClick={this.change}>{this.state.text}</Button>
                 <Register></Register>
                 <Login></Login>

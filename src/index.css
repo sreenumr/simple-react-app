@@ -1,5 +1,4 @@
-.Form{
-    
+.Form{ 
     position: absolute;
     top: 50%;
     left: 40%;
@@ -9,4 +8,30 @@
     border-radius: 3px;
     border:2px solid blue;
     display: inline-block;
+}
+
+Button{
+    margin:10px;
+    padding: 10px;
+}
+
+Button{
+    border:none;
+    background:yellow;
+}
+
+Button:hover{
+    border:none;
+    background:yellowgreen;
+}
+
+input{
+    outline:none;
+    border-bottom:solid black 1px;
+    background:transparent;
+    border-left:none;
+    border-right:none;
+    border-top:none;
+    margin:10px;
+    padding:5px;
 }
