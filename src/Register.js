@@ -3,10 +3,6 @@ import React, { Component } from 'react';
 class Register extends Component{
 
 
-    state = {
-        on:true,
-    };
-
     render(){
         return(
          

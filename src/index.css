@@ -10,17 +10,17 @@
     display: inline-block;
 }
 
-Button{
+button{
     margin:10px;
     padding: 10px;
 }
 
-Button{
+button{
     border:none;
     background:yellow;
 }
 
-Button:hover{
+button:hover{
     border:none;
     background:yellowgreen;
 }

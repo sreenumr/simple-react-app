@@ -6,7 +6,6 @@ import {Button} from 'react-bootstrap'
 
 class Form extends Component{
     
-
     state={
         login:true,
         reg:false,
@@ -35,8 +34,8 @@ class Form extends Component{
     render(){
         return(
             <div className="Form">
-                <Button onClick={this.change}>{this.state.text}</Button>
-                {this.state.reg ?<Register></Register>:null}
+                <button onClick={this.change}>{this.state.text}</button>
+                {this.state.reg?<Register></Register>:null}
                 {this.state.login?<Login></Login>:null}
             </div>
         )
