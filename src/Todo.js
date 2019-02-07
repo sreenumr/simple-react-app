@@ -29,11 +29,25 @@ class Todo extends Component{
         })
     }
 
+    addTodo=()=>{
+        
+        var todo = document.getElementById('todo').value;
+        console.log(todo)
+        var todoList = this.state.todos
+        todoList.push({id:Math.random(),content:todo});
+        this.setState({
+            todos:todoList     
+        })
+
+    }
+
     render(){
         console.log(this.state);
         return(
             <div>
-                <TodoList todos={this.state.todos} deleteItem={this.deleteItem}></TodoList>
+                <TodoList todos={this.state.todos} del={this.deleteItem}></TodoList>
+                <input id="todo" type="text" placeholder="AddTodo"></input>
+                <button onClick={this.addTodo}>AddTodo</button>
             </div>
         )
     }

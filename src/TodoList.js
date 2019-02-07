@@ -1,11 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
 
-const TodoList = ({todos,deleteItem}) =>{  
+const TodoList = ({todos,del}) =>{  
      //console.log(props.todos);
     console.log(todos);
      const list =(todos.map( (todo)=>{
        return (
-         <div key={todo.id} onClick={()=>deleteItem(todo.id)}>
+         <div key={todo.id} onClick={()=>del(todo.id)}>
            {todo.content}
          </div>
        )
