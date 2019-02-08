@@ -1,11 +1,12 @@
 import React from 'react';
+import './index.css'
 
 const TodoList = ({todos,del}) =>{  
      //console.log(props.todos);
     console.log(todos);
      const list =(todos.map( (todo)=>{
        return (
-         <div key={todo.id} onClick={()=>del(todo.id)}>
+         <div className="collection-item" key={todo.id} onClick={()=>del(todo.id)}>
            {todo.content}
          </div>
        )
@@ -14,8 +15,7 @@ const TodoList = ({todos,del}) =>{
   
 
   return (
-     <h1>{list}</h1>
-    //<h1>sjdh</h1>
+     <div >{list}</div>
   )
 }
 export default TodoList

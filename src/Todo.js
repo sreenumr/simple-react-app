@@ -46,9 +46,10 @@ class Todo extends Component{
     render(){
         console.log(this.state);
         return(
-            <div className="Todo">
+                
+            <div className="container collection">
                 <TodoList todos={this.state.todos} del={this.deleteItem}></TodoList>
-                <input id="todo" type="text" placeholder="AddTodo"></input>
+                <input className="input-field" id="todo" type="text" placeholder="AddTodo"  ></input>
                 <button onClick={this.addTodo}>AddTodo</button>
             </div>
         )

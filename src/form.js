@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import Register from './Register'
 import Login from './Login'
 import './index.css'
-import {Button} from 'react-bootstrap'
 
 class Form extends Component{
     
