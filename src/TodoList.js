@@ -2,8 +2,7 @@ import React from 'react';
 import './index.css'
 
 const TodoList = ({todos,del}) =>{  
-     //console.log(props.todos);
-    console.log(todos);
+
      const list =(todos.map( (todo)=>{
        return (
          <div className="collection-item" key={todo.id} onClick={()=>del(todo.id)}>
@@ -13,8 +12,7 @@ const TodoList = ({todos,del}) =>{
      })
  )
   
-
-  return (
+    return (
      <div >{list}</div>
   )
 }

@@ -1,25 +1,23 @@
 import React, { Component } from 'react';
 import TodoList from './TodoList'
+import AddTodo from './Addtodo'
 
 class Todo extends Component{
-
     state={
-        
         todos:[
-
             {id:1,content:"asdasdl"},
             {id:2,content:"sa;dm;"},
             {id:3,content:"sd;lad;lm"},
             {id:4,content:"saodnoi"},
-
         ]
     }
-
+ 
 
     deleteItem=(id)=>{
-    
+
+           // setTimeout(()=>{console.log("Item deleted")},2000)
             const newList = this.state.todos.filter( (item)=> {
-               
+               console.log(item)
                 return item.id !== id
             }
             );
@@ -29,28 +27,28 @@ class Todo extends Component{
         })
     }
 
-    addTodo=()=>{
+    addTodo=(todo)=>{
         
-        var todo = document.getElementById('todo').value;
-        console.log(todo)
-        var todoList = this.state.todos
-        todoList.push({id:Math.random(),content:todo});
-        this.setState({
-            todos:todoList     
+        // var todo = document.getElementById('todo').value;
+           var todoList = this.state.todos
+           todoList.push({id:Math.random(),content:todo});
+           this.setState({
+           todos:todoList     
         })
 
-        document.getElementById('todo').value = ""
+        // document.getElementById('todo').value = ""
+
 
     }
 
     render(){
-        console.log(this.state);
         return(
                 
             <div className="container collection">
                 <TodoList todos={this.state.todos} del={this.deleteItem}></TodoList>
-                <input className="input-field" id="todo" type="text" placeholder="AddTodo"  ></input>
-                <button onClick={this.addTodo}>AddTodo</button>
+                {/*<input  id="todo"  type="text" placeholder="AddTodo"></input>
+                <button onClick={this.addTodo}>AddTodo</button>*/}
+                <AddTodo addTodo={this.addTodo}></AddTodo>
             </div>
         )
     }
