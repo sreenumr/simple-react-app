@@ -31,7 +31,9 @@ class Todo extends Component{
         console.log(todo)           
         const db  = firebase.firestore();
 
-        const todoCollection = db.collection("Todos").add({
+        const todoCollection = db.collection("Todos")
+        
+        todoCollection.add({
             content:todo
         })
         
