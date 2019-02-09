@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import ReactDOM from 'react-dom';
-import Form from './form'
-import Todo from './Todo'
+import Form from './Components/form'
+import Todo from './Components/Todo'
+import Navbar from './Components/Navbar'
 
 class App extends Component {
   render() {
 return(
       <div>
         <Form></Form>
-        <br></br>
         <Todo></Todo>
       </div>
 )

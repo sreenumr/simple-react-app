@@ -3,8 +3,7 @@ import React,{Component} from 'react'
  class AddTodo extends Component{
    
     state={
-        id:Math.random(),
-        content:""
+             content:""
     }
 
     getTodo=(e)=>{
@@ -17,13 +16,13 @@ import React,{Component} from 'react'
 
     formSubmit=(e)=>{
         e.preventDefault();
-        console.log(this.state.content);
-        this.props.addTodo(this.state.content)
+            this.props.addTodo(this.state.content)
     }
 
-    render()  { return(
+    render()  { 
+        return(
          <form onSubmit={this.formSubmit}>
-            <input type="text" onChange={this.getTodo}></input>
+            <input type="text"  onChange={this.getTodo}></input>
             <button onClick={this.formSubmit}>AddTodo</button>
          </form>
     
