@@ -8,26 +8,28 @@ import React,{Component} from 'react'
 
     getTodo=(e)=>{
         const todo = e.target.value
-        this.setState({
-            id:Math.random(),
-            content:todo,
-        })
+         
+                this.setState({
+                content:todo,
+            })
+         
     }
 
     formSubmit=(e)=>{
-        e.preventDefault();
+
+            e.preventDefault();
             this.props.addTodo(this.state.content)
     }
 
     render()  { 
         return(
          <form onSubmit={this.formSubmit}>
-            <input type="text"  onChange={this.getTodo}></input>
-            <button onClick={this.formSubmit}>AddTodo</button>
+            <input required type="text"  onChange={this.getTodo} ></input>
+            <button type="submit" onClick={this.formSubmit}>AddTodo</button>
          </form>
     
         )
-         }
+    }
 }
 
 export default AddTodo

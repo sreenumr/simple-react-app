@@ -11,6 +11,8 @@ class Form extends Component{
         text:"Login",
     }
     
+
+
     change=()=>{
 
         if( this.state.login )
