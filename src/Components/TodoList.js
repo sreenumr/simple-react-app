@@ -3,12 +3,17 @@ import './index.css'
 import firebase from 'firebase'
 import firestore from './Firestore'
 
-const TodoList = (todos) =>{  
+const TodoList = ({todoList}) =>{  
 
-  const list = todos.length?(todos.map(todo=>{
+  //console.log("Todos")
+  // console.log(todoList)
+  // console.log(todoList.length)
+  console.log(todoList.length)
+
+  const list = todoList.length?(todoList.map(todo=>{
     return(
       <div className="collection-item">
-        {todos.content}
+        {todo.content}
       </div>
     )
   })):(

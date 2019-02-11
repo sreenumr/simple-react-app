@@ -4,30 +4,39 @@ import AddTodo from './Addtodo'
 import firebase from 'firebase'
 
 class Todo extends Component{
-    state={
 
+
+    state={
         todos:[
-            {content:""}
         ]
     }
 
 
-            componentDidMount(){
-                const db  = firebase.firestore();
-                const todos = db.collection("Todos")
-                const todoList = []
+    componentDidMount(){
 
-                todos.get().then((snap)=>{
-                (snap.forEach(element => {todoList.push(element.data())
-                    })
-            )
-        })
+        const db  = firebase.firestore();
+        const todos = db.collection("Todos")
+        const todoList = []
+        console.log("collection")
 
-        this.setState({ todos:todoList },()=>{
-            setTimeout(console.log(this.state.todos),5000)
-        })
-    }
+        todos.get().then((snap)=>{
  
+        (snap.forEach((element) => {todoList.push(element.data())
+            }
+        
+        )
+        
+    )
+    this.setState({ todos:todoList },()=>{
+        console.log(this.state.todos)
+    })
+})
+
+//this.state={todos:[todoList]}
+
+
+    }
+
 
     deleteItem=(id)=>{
 
@@ -61,7 +70,7 @@ class Todo extends Component{
             <div>
                 <h2>Todos</h2>
                 <div className="container collection">
-                    <TodoList displayTodo={this.state.todos}/>
+                    <TodoList todoList={this.state.todos}/>
                     <AddTodo addTodo={this.addTodo}></AddTodo>
                 </div>
             </div>
